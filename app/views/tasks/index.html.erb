@@ -5,6 +5,10 @@
     <li class="list-group-item border-0">
       [<%= task.completed? ? "X" : " " %>]
       <%= link_to task.title, task_path(task) %>
+      -
+      <%= link_to task_path(task), method: :delete do %>
+        <strong>X</strong>
+      <% end %>
     </li>
   <% end %>
 </ul>
