@@ -3,7 +3,8 @@
 <ul class="list-group">
   <% @tasks.each do |task| %>
     <li class="list-group-item border-0">
-      [<%= task.completed? ? "X" : " " %>] <%= task.title %>
+      [<%= task.completed? ? "X" : " " %>]
+      <%= link_to task.title, task_path(task) %>
     </li>
   <% end %>
 </ul>
